@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://blogapp-frontend-0fpl.onrender.com',
     credentials:true
 }))
 app.use(cookieParser());
