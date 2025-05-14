@@ -35,10 +35,10 @@ const Blog = ({props}) => {
         {
           const data = new FormData();
           data.append('file',file);
-          const res = await axios.post("http://localhost:4000/api/upload",data,{withCredentials:true});
+          const res = await axios.post("https://blogapp-backend-ys0u.onrender.com/api/upload",data,{withCredentials:true});
           tot.image_url = res.data.message;
         }
-        const res = await axios.post("http://localhost:4000/api/post",tot,{withCredentials:true});
+        const res = await axios.post("https://blogapp-backend-ys0u.onrender.com/api/post",tot,{withCredentials:true});
         setRedirect(true);
     }
 

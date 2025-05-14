@@ -34,16 +34,16 @@ const EditPost = () => {
         {
           const data = new FormData();
           data.append('file',file);
-          const res = await axios.post("http://localhost:4000/api/upload",data,{withCredentials:true});
+          const res = await axios.post("https://blogapp-backend-ys0u.onrender.com/api/upload",data,{withCredentials:true});
           tot.image_url = res.data.message;
         }
-        const res = await axios.put(`http://localhost:4000/api/post/${id}`,tot,{withCredentials:true});
+        const res = await axios.put(`https://blogapp-backend-ys0u.onrender.com/api/post/${id}`,tot,{withCredentials:true});
         // console.log(res);
         setRedirect(true);
     }
     useEffect(()=>{
         const getData = async () =>{
-            const {data} = await axios.get(`http://localhost:4000/api/post/${id}`,{withCredentials:true});
+            const {data} = await axios.get(`https://blogapp-backend-ys0u.onrender.com/api/post/${id}`,{withCredentials:true});
             const d = data.data[0];
             // console.log(data.data[0]);
             setTitle(d.title);

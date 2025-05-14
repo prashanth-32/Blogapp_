@@ -14,7 +14,7 @@ const PostPage = () => {
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
-        const {data} = await axios.get(`http://localhost:4000/api/post/${id}`, {
+        const {data} = await axios.get(`https://blogapp-backend-ys0u.onrender.com/api/post/${id}`, {
           withCredentials: true,
         });
         setPostData(data.data[0]);
@@ -23,7 +23,7 @@ const PostPage = () => {
     getData();
   }, []);
   const deletePost = async () =>{
-    await axios.delete(`http://localhost:4000/api/${id}`,{
+    await axios.delete(`https://blogapp-backend-ys0u.onrender.com/api/${id}`,{
       withCredentials:true,
     });
     setRedirect(true);

@@ -10,7 +10,7 @@ const Register = () => {
   const {userInfo,setUserInfo} = useContext(Usercontext);
   const handleClick = async (e) =>{
       e.preventDefault();
-      const res = await axios.post("http://localhost:4000/users/register",{username:user,password,email});
+      const res = await axios.post("https://blogapp-backend-ys0u.onrender.com/users/register",{username:user,password,email});
       console.log(res.data);
       if(res.status !== 200)
       {

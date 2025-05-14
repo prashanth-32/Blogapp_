@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const getPosts = async () =>{
       setLoading(true);
-      const res = await axios.get("http://localhost:4000/api/posts",null,{withCredentials:true});
+      const res = await axios.get("https://blogapp-backend-ys0u.onrender.com/api/posts",null,{withCredentials:true});
       setPosts(res.data.posts);
     }
     getPosts();

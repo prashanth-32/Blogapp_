@@ -11,7 +11,7 @@ export const YourPosts = () => {
     useEffect(() => {
         const getPosts = async () =>{
         setLoading(() => true);
-        const {data} = await axios.get(`http://localhost:4000/api/userPosts/${userInfo.username}`,null,{withCredentials:true});
+        const {data} = await axios.get(`https://blogapp-backend-ys0u.onrender.com/api/userPosts/${userInfo.username}`,null,{withCredentials:true});
         console.log(data);
         setPosts(data.posts);
         }

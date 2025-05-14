@@ -8,7 +8,7 @@ const Navbar = () => {
   const {userInfo,setUserInfo} = useContext(Usercontext);
   const handleLogOut = async (e) =>{
     e.preventDefault();
-    const res = await axios.post("http://localhost:4000/users/logout",null,{withCredentials:true});
+    const res = await axios.post("https://blogapp-backend-ys0u.onrender.com/users/logout",null,{withCredentials:true});
     console.log(res);
     setUserInfo(null);
     <Navigate to={'/login'}/>

@@ -20,7 +20,7 @@ function App() {
   
   useEffect(()=>{
     const getData = async () =>{
-      const res = await axios.get("http://localhost:4000/users/info",{withCredentials:true});
+      const res = await axios.get("https://blogapp-backend-ys0u.onrender.com/users/info",{withCredentials:true});
       setUserInfo(res.data);
     }
     getData();
